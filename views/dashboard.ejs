@@ -14,48 +14,111 @@
          
               <%- include("./partials/topbar.ejs") %>
 
-          <div class="container-fluid">
-            
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">All Blogs</h1>
-              <a
-                href="#"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                ><i class="fas fa-download fa-sm text-white-50"></i>Filter</a
-              >
-            </div>
-              <% if (blogs.length > 0) { %> <% blogs.forEach(blog => { %>
-                <div class="blogs content">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <a  class="single" href="/<%= blog._id %>">
-                  <h6 class="title m-0 font-weight-bold text-primary">
-                    <%= blog.title %>
-                    
-                  </h6>
+              <div class="container-fluid">
+      
+                <div
+                  class="d-sm-flex align-items-center justify-content-between mb-4"
+                >
+                  <h1 class="h3 mb-0 text-gray-800">Hey! what's up? Wanna share something knowledgeable? <img
+                    src="/brain-ok3.png"
+                    class="img-fluid animated"
+                    alt="home img"
+                    style="height:150px;width:150px;"
+                  /></h1>
                 </div>
               
-                <div class="card-body">
-                  <p class="snippet">
-                    <%= blog.snippet %>
-                  </p>
-                 </a>
-                 </div>
-                </div>
-              </div>
-                 <% }) %> <% } else { %>
-                  <p>There are no blogs to display...</p>
-                  <% } %>
+                  
+                  
+    
+                <div class="col-lg-12">
+    
+                  <div class="card position-relative">
+                    <!-- <div class="card-header py-3">
+                      <h6 class="m-0 font-weight-bold text-primary">Please Fill Assignment Details Below</h6>
+                    </div> -->
+                    <div class="card-body">
+                      <div class="mb-3">
+                       
+                      </div>
+                      <form>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Title</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter the title..">
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Content</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter the content.." rows="3"></textarea>
+                        </div>
+                      </form>
+                        </div>
+                      </div>
+                      <br><br>
+                      <!-- <div class="form-group"> 
+                        <label class="control-label" for="date">Date</label>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                      </div> -->
+                      <!-- Popup -->
+
+<div
+class="modal fade"
+id="Assign"
+tabindex="-1"
+role="dialog"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+      <button
+        class="close"
+        type="button"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Hey! your words have been shared successfully :)
+    </div>
+    <!-- <div class="modal-footer">
+      <button class="btn btn-secondary" type="button" data-dismiss="modal">
+        Cancel
+      </button>
+      <a class="btn btn-primary" href="/users/logout">Logout</a>
+    </div> -->
+  </div>
+</div>
+</div>
+
                 
+                
+                <div class="dropdown mb-4">
+                  <!-- <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Class To Assign
+                  </button> -->
+                  <!-- <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Cse - A (III)</a>
+                    <a class="dropdown-item" href="#">Cse - G (II)</a>
+                    <a class="dropdown-item" href="#">Cse - B (IV)</a>
+                  </div> -->
+                </div>
+                <label for="exampleFormControlTextarea1">Pls be carefull with your content, you can't delete/edit yourself </label>
+                <br><button class="btn btn-primary sidebar-toggled" style="top:0px;" type="button" data-toggle="modal"
+                data-target="#Assign" id="MenuButton">Share</button>
+                <br> <br>
+                 </div>
+            </div>
+
+          </div>
+          <!-- CREATE ASSIGN COMPLETE -->
 
             
-            <%- include("./partials/decard.ejs") %>
-
-              
-            </div>  
-        </div>
+          </div>  
+      </div>
       
         <%- include("./partials/footer.ejs") %>
       </div>

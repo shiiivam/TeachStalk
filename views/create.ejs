@@ -1,0 +1,67 @@
+<%- include("./partials/head.ejs") %>
+
+  <body id="page-top">
+   
+    <div id="wrapper">
+ 
+      <%- include("./partials/sideBar.ejs") %>
+      
+
+      <div id="content-wrapper" class="d-flex flex-column">
+        
+        <div id="content">
+      
+              <%- include("./partials/topbar.ejs") %>
+          
+
+          
+
+              <div class="container-fluid">
+                <h1 class="h3 mb-2 text-gray-800">Grades</h1>
+
+  <div class="create-blog content">
+    <form action="/create" method="POST">
+      <label for="title">Blog title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="snippet">Blog snippet:</label>
+      <input type="text" id="snippet" name="snippet" required>
+      <label for="body">Blog body:</label>
+      <textarea id="body" name="body" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+
+</div>
+</div>
+
+</div>
+    </div>
+
+</div>
+
+
+
+</div>  
+</div>
+
+
+
+<%- include("./partials/footer.ejs") %>
+
+</div>
+
+</div>
+
+
+
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+</a>
+
+
+<%- include("./partials/lout.ejs") %>
+
+
+<%- include("./partials/btrap.ejs") %>
+</body>
+</html>
